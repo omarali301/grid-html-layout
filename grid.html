@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display:grid;
+      height: 100vh;
+      grid-gap: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ff5e00;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.4fr 1.5fr 1.2fr 0.6fr;
+      grid-template-areas: 
+      "logo nav nav nav"
+      "sidebar main main main"
+      "sidebar content1 content2 content3"
+      "footer footer footer footer"     
+      
+      ;
+
+     
+    }
+    p{
+      text-transform: lowercase;
+      color: black;
+    }
+    #logo {
+      background-color: #bccff3;
+      grid-area: logo;
+}
+
+nav {
+  background-color: #bccff3;
+  grid-area: nav;
+}
+main{
+  background-color: #bcd4f3;
+  grid-area: main;
+}
+#sidebar {
+  background-color: #bcd4f3;
+  grid-area: sidebar;
+}
+#content1{
+  background-color: #bcd4f3;
+  grid-area: content1;
+}
+#content2{
+  background-color: #bcd4f3;
+  grid-area: content2;
+}
+#content3{
+  background-color: #bcd4f3;
+  grid-area: content3;
+}
+footer {
+  background-color: #bcd4f3;
+  grid-area: footer;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1.5fr 1.2fr 1.2fr 1fr 0.8fr;
+    grid-template-areas: 
+    "logo"
+    "nav"
+    "sidebar"
+    "main"
+    "content1"
+    "content2"
+    "content3"
+    "footer"
+    ;
+  }
+
+  
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="logo">Logo</div>
+    <nav>Navbar</nav>
+    <main>Main
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, praesentium!</p>
+    </main>
+    <div id="sidebar">Sidebar
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, praesentium!</p>
+    </div>
+    <div id="content1">Content1
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, praesentium!</p>
+    </div>
+    <div id="content2">Content2
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, praesentium!</p>
+    </div>
+    <div id="content3">Content3
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, praesentium!</p>
+    </div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
