@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid new</title>
+    <style>
+        .container {
+          display:grid;
+          height:100vh;
+          grid-gap: 5px;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 0.4fr 1.2fr 1.2fr 0.8fr;
+          grid-template-areas: 
+            "nav header header header"
+            "nav card1 card2 card3"
+            "nav card1 card2 card4"
+            "nav footer footer footer"
+            ;
+        
+        }
+
+        header{
+            background-color: #e95353;
+            grid-area: header;
+        }
+        nav{
+            background-color: #e95353;
+            grid-area: nav;
+        }
+        #card1{
+            background-color: #e95353;
+            grid-area: card1;
+        }
+        #card2{
+            background-color: #e95353;
+            grid-area: card2;
+        }
+        #card3{
+            background-color: #e95353;
+            grid-area: card3;
+        }
+        #card4{
+            background-color: #e95353;
+            grid-area: card4;
+        }
+        footer{
+            background-color: #e95353;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <div id="card1">Card 1</div>
+        <div id="card2">Card 2</div>
+        <div id="card3">Card 3</div>
+        <div id="card4">Card 4</div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
